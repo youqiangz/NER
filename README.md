@@ -8,21 +8,30 @@
 
 ```
 NER/
+├── .gitignore
+├── .python-version
 ├── README.md           # 项目说明文档
 ├── checkpoint/         # 模型检查点保存目录
+├── pyproject.toml      # Python项目配置
 ├── service/            # 服务部署相关代码
-│   ├── config/         # 服务配置文件
-│   ├── data/           # 服务所需数据
-│   ├── logs/           # 日志文件
-│   ├── scripts/        # 部署脚本
-│   ├── src/            # 服务源代码
-│   ├── tests/          # 测试代码
-│   ├── Jenkinsfile     # CI/CD配置
-│   ├── LICENSE         # 许可证
-│   ├── Makefile        # 构建配置
 │   ├── README.md       # 服务说明文档
+│   ├── __init__.py    
+│   ├── config/         # 服务配置文件
+│   │   ├── __init__.py
+│   │   └── settings.yaml
+│   ├── data/           # 服务测试数据
+│   │   └── sample_input.txt
+│   ├── logs/           # 日志文件
 │   ├── requirements.txt # 依赖包列表
-│   └── setup.py        # 安装脚本
+│   ├── scripts/        # 部署脚本
+│   │   └── start_server.sh
+│   ├── src/            # 服务源代码
+│   │   └── ner_service/
+│   ├── tests/          # 测试代码
+│   │   ├── __init__.py
+│   │   ├── test_api.py
+│   │   └── test_predictor.py
+│   └── uv.lock
 └── train/              # 模型训练相关代码
     ├── algo/           # 算法实现
     │   └── ner_global_pointer.py # 基于GlobalPointer的NER实现
