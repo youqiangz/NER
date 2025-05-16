@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from .schemas import NerRequest, NerResponse
-from src.ner_service.models.predictor import NERPredictor
+from ..models.predictor import NERPredictor
 from .schemas import NerEntity
 from loguru import logger
 
